@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/devel/setup.sh

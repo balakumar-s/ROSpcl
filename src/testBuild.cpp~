@@ -1,0 +1,7 @@
+//Program tests succesful build of executables in the package
+#include<ros/ros.h>
+int main()
+{
+printf("%nhello, Build works%n");
+}
+
