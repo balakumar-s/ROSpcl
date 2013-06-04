@@ -192,6 +192,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named pclFiltersKinect
+
+# Build rule for target.
+pclFiltersKinect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pclFiltersKinect
+.PHONY : pclFiltersKinect
+
+# fast build rule for target.
+pclFiltersKinect/fast:
+	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/build
+.PHONY : pclFiltersKinect/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -335,19 +348,6 @@ test-results-run/fast:
 .PHONY : test-results-run/fast
 
 #=============================================================================
-# Target rules for targets named testBuild
-
-# Build rule for target.
-testBuild: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testBuild
-.PHONY : testBuild
-
-# fast build rule for target.
-testBuild/fast:
-	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/build
-.PHONY : testBuild/fast
-
-#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -386,29 +386,29 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/testBuild.o: src/testBuild.cpp.o
-.PHONY : src/testBuild.o
+src/pclFiltersKinect.o: src/pclFiltersKinect.cpp.o
+.PHONY : src/pclFiltersKinect.o
 
 # target to build an object file
-src/testBuild.cpp.o:
-	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.o
-.PHONY : src/testBuild.cpp.o
+src/pclFiltersKinect.cpp.o:
+	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.o
+.PHONY : src/pclFiltersKinect.cpp.o
 
-src/testBuild.i: src/testBuild.cpp.i
-.PHONY : src/testBuild.i
+src/pclFiltersKinect.i: src/pclFiltersKinect.cpp.i
+.PHONY : src/pclFiltersKinect.i
 
 # target to preprocess a source file
-src/testBuild.cpp.i:
-	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.i
-.PHONY : src/testBuild.cpp.i
+src/pclFiltersKinect.cpp.i:
+	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.i
+.PHONY : src/pclFiltersKinect.cpp.i
 
-src/testBuild.s: src/testBuild.cpp.s
-.PHONY : src/testBuild.s
+src/pclFiltersKinect.s: src/pclFiltersKinect.cpp.s
+.PHONY : src/pclFiltersKinect.s
 
 # target to generate assembly for a file
-src/testBuild.cpp.s:
-	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.s
-.PHONY : src/testBuild.cpp.s
+src/pclFiltersKinect.cpp.s:
+	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.s
+.PHONY : src/pclFiltersKinect.cpp.s
 
 # Help Target
 help:
@@ -425,6 +425,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... pclFiltersKinect"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
 	@echo "... rosbuild_precompile"
@@ -437,13 +438,12 @@ help:
 	@echo "... test-future"
 	@echo "... test-results"
 	@echo "... test-results-run"
-	@echo "... testBuild"
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/testBuild.o"
-	@echo "... src/testBuild.i"
-	@echo "... src/testBuild.s"
+	@echo "... src/pclFiltersKinect.o"
+	@echo "... src/pclFiltersKinect.i"
+	@echo "... src/pclFiltersKinect.s"
 .PHONY : help
 
 

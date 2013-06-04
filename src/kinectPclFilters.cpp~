@@ -1,0 +1,56 @@
+#include"ros/ros.h"
+#include "std_msgs/String.h"
+#include <pcl/point_types.h>
+#include <pcl/filters/voxel_grid.h>
+#include <pcl/filters/passthrough.h>
+#include <pcl/filters/statistical_outlier_removal.h>
+//global variables
+ros::Publisher filteredPub;
+//ros::Publisher nearObjects;
+sensor_msgs::PointCloud2 filteredOutput;
+void callback(const sensor_msgs::PointCloud2ConstPtr& input)
+{
+  printf ("PCL Filters running/n");
+ 
+  //Voxel grid filter used to reduce computation requirements 
+  pcl::VoxelGrid<sensor_msgs::PointCloud2> vG;
+  vG.setInputCloud (input);
+  vG.setLeafSize (0.01f, 0.01f, 0.01f);
+  vG.filter (filteredOutput);
+  //Statistical Outlier Removal(remove noise)
+  //pcl::StatisticalOutlierRemoval<sensor_msgs::PointCloud2> sor;
+  //sor.setInputCloud(filteredOutput);
+  //sor.setMeanK(50);
+  //sor.setStddevMulThresh(1.0);
+  //sor.filter(filteredOutput);
+  filteredPub.publish(filteredOutput);
+  //passthrough filter to detect nearby objects
+  pcl::PassThrough<sensor_msgs::PointCloud2> pass;
+  pass.setInputCloud(filteredOutput);
+  pass.setFilterFieldName("z");
+  pass.setFilterLimits(0,1);
+  pass.filter(filteredOutput);
+  //nearObjects.publish(filteredOutput);
+}
+
+
+
+
+int
+main (int argc, char** argv)
+{
+  ros::init (argc, argv, "kinectPclFilters");
+  ros::NodeHandle nh;
+
+
+  ros::Subscriber sub = nh.subscribe("/camera/depth_registered/points", 1, callback);
+
+
+  filteredPub = nh.advertise<sensor_msgs::PointCloud2> ("filteredOutput", 1);
+ // nearObjects = nh.advertise<sensor_msgs::PointCloud2>("nearObjects",1);
+  ros::spin();
+
+
+  return (0);
+}
+
