@@ -47,7 +47,7 @@ void callback(const sensor_msgs::PointCloud2 input)
     pcl::PassThrough<pcl::PointXYZRGB> pass;
     pass.setInputCloud(output_pcl);
     pass.setFilterFieldName("z");
-    pass.setFilterLimits(0,2);
+    pass.setFilterLimits(0,1.5);
     pass.filter(*output_pcl);
   //near object in a seperate topic 
     pcl::toROSMsg(*output_pcl,filteredOutput);
