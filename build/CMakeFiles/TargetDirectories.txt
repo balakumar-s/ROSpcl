@@ -4,6 +4,8 @@
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/doxygen.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest_main.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/kinectDataTest.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/passThrough.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/pclFiltersKinect.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/rosbuild_clean-test-results.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/rosbuild_precompile.dir
@@ -16,4 +18,5 @@
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/test-future.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/test-results.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/test-results-run.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/testBuild.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/tests.dir

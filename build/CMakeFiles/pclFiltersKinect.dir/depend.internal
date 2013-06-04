@@ -56,6 +56,10 @@ CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.o
  /opt/ros/groovy/include/pcl-1.6/pcl/filters/voxel_grid.h
  /opt/ros/groovy/include/pcl-1.6/pcl/for_each_type.h
  /opt/ros/groovy/include/pcl-1.6/pcl/impl/point_types.hpp
+ /opt/ros/groovy/include/pcl-1.6/pcl/io/file_io.h
+ /opt/ros/groovy/include/pcl-1.6/pcl/io/impl/pcd_io.hpp
+ /opt/ros/groovy/include/pcl-1.6/pcl/io/lzf.h
+ /opt/ros/groovy/include/pcl-1.6/pcl/io/pcd_io.h
  /opt/ros/groovy/include/pcl-1.6/pcl/kdtree/flann.h
  /opt/ros/groovy/include/pcl-1.6/pcl/kdtree/kdtree.h
  /opt/ros/groovy/include/pcl-1.6/pcl/kdtree/kdtree_flann.h
@@ -340,3 +344,4 @@ CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.o
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/misc/Solve.h
+ /usr/include/qhull/io.h

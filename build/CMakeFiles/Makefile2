@@ -177,13 +177,83 @@ clean: CMakeFiles/doxygen.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/kinectDataTest.dir
+
+# All Build rule for target.
+CMakeFiles/kinectDataTest.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/depend
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  4
+	@echo "Built target kinectDataTest"
+.PHONY : CMakeFiles/kinectDataTest.dir/all
+
+# Include target in all.
+all: CMakeFiles/kinectDataTest.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/kinectDataTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/kinectDataTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/kinectDataTest.dir/rule
+
+# Convenience name for target.
+kinectDataTest: CMakeFiles/kinectDataTest.dir/rule
+.PHONY : kinectDataTest
+
+# clean rule for target.
+CMakeFiles/kinectDataTest.dir/clean:
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/clean
+.PHONY : CMakeFiles/kinectDataTest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/kinectDataTest.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/passThrough.dir
+
+# All Build rule for target.
+CMakeFiles/passThrough.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/depend
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  5
+	@echo "Built target passThrough"
+.PHONY : CMakeFiles/passThrough.dir/all
+
+# Include target in all.
+all: CMakeFiles/passThrough.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/passThrough.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/passThrough.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/passThrough.dir/rule
+
+# Convenience name for target.
+passThrough: CMakeFiles/passThrough.dir/rule
+.PHONY : passThrough
+
+# clean rule for target.
+CMakeFiles/passThrough.dir/clean:
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/clean
+.PHONY : CMakeFiles/passThrough.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/passThrough.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/pclFiltersKinect.dir
 
 # All Build rule for target.
 CMakeFiles/pclFiltersKinect.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/depend
 	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  6
 	@echo "Built target pclFiltersKinect"
 .PHONY : CMakeFiles/pclFiltersKinect.dir/all
 
@@ -550,6 +620,41 @@ CMakeFiles/test-results-run.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/test-results-run.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testBuild.dir
+
+# All Build rule for target.
+CMakeFiles/testBuild.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/depend
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  7
+	@echo "Built target testBuild"
+.PHONY : CMakeFiles/testBuild.dir/all
+
+# Include target in all.
+all: CMakeFiles/testBuild.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/testBuild.dir/rule
+
+# Convenience name for target.
+testBuild: CMakeFiles/testBuild.dir/rule
+.PHONY : testBuild
+
+# clean rule for target.
+CMakeFiles/testBuild.dir/clean:
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/clean
+.PHONY : CMakeFiles/testBuild.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/testBuild.dir/clean
 .PHONY : clean
 
 #=============================================================================

@@ -192,6 +192,32 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named kinectDataTest
+
+# Build rule for target.
+kinectDataTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinectDataTest
+.PHONY : kinectDataTest
+
+# fast build rule for target.
+kinectDataTest/fast:
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/build
+.PHONY : kinectDataTest/fast
+
+#=============================================================================
+# Target rules for targets named passThrough
+
+# Build rule for target.
+passThrough: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 passThrough
+.PHONY : passThrough
+
+# fast build rule for target.
+passThrough/fast:
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/build
+.PHONY : passThrough/fast
+
+#=============================================================================
 # Target rules for targets named pclFiltersKinect
 
 # Build rule for target.
@@ -348,6 +374,19 @@ test-results-run/fast:
 .PHONY : test-results-run/fast
 
 #=============================================================================
+# Target rules for targets named testBuild
+
+# Build rule for target.
+testBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testBuild
+.PHONY : testBuild
+
+# fast build rule for target.
+testBuild/fast:
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/build
+.PHONY : testBuild/fast
+
+#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -386,6 +425,54 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/kinectDataTest.o: src/kinectDataTest.cpp.o
+.PHONY : src/kinectDataTest.o
+
+# target to build an object file
+src/kinectDataTest.cpp.o:
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/src/kinectDataTest.cpp.o
+.PHONY : src/kinectDataTest.cpp.o
+
+src/kinectDataTest.i: src/kinectDataTest.cpp.i
+.PHONY : src/kinectDataTest.i
+
+# target to preprocess a source file
+src/kinectDataTest.cpp.i:
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/src/kinectDataTest.cpp.i
+.PHONY : src/kinectDataTest.cpp.i
+
+src/kinectDataTest.s: src/kinectDataTest.cpp.s
+.PHONY : src/kinectDataTest.s
+
+# target to generate assembly for a file
+src/kinectDataTest.cpp.s:
+	$(MAKE) -f CMakeFiles/kinectDataTest.dir/build.make CMakeFiles/kinectDataTest.dir/src/kinectDataTest.cpp.s
+.PHONY : src/kinectDataTest.cpp.s
+
+src/passThrough.o: src/passThrough.cpp.o
+.PHONY : src/passThrough.o
+
+# target to build an object file
+src/passThrough.cpp.o:
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/src/passThrough.cpp.o
+.PHONY : src/passThrough.cpp.o
+
+src/passThrough.i: src/passThrough.cpp.i
+.PHONY : src/passThrough.i
+
+# target to preprocess a source file
+src/passThrough.cpp.i:
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/src/passThrough.cpp.i
+.PHONY : src/passThrough.cpp.i
+
+src/passThrough.s: src/passThrough.cpp.s
+.PHONY : src/passThrough.s
+
+# target to generate assembly for a file
+src/passThrough.cpp.s:
+	$(MAKE) -f CMakeFiles/passThrough.dir/build.make CMakeFiles/passThrough.dir/src/passThrough.cpp.s
+.PHONY : src/passThrough.cpp.s
+
 src/pclFiltersKinect.o: src/pclFiltersKinect.cpp.o
 .PHONY : src/pclFiltersKinect.o
 
@@ -410,6 +497,30 @@ src/pclFiltersKinect.cpp.s:
 	$(MAKE) -f CMakeFiles/pclFiltersKinect.dir/build.make CMakeFiles/pclFiltersKinect.dir/src/pclFiltersKinect.cpp.s
 .PHONY : src/pclFiltersKinect.cpp.s
 
+src/testBuild.o: src/testBuild.cpp.o
+.PHONY : src/testBuild.o
+
+# target to build an object file
+src/testBuild.cpp.o:
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.o
+.PHONY : src/testBuild.cpp.o
+
+src/testBuild.i: src/testBuild.cpp.i
+.PHONY : src/testBuild.i
+
+# target to preprocess a source file
+src/testBuild.cpp.i:
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.i
+.PHONY : src/testBuild.cpp.i
+
+src/testBuild.s: src/testBuild.cpp.s
+.PHONY : src/testBuild.s
+
+# target to generate assembly for a file
+src/testBuild.cpp.s:
+	$(MAKE) -f CMakeFiles/testBuild.dir/build.make CMakeFiles/testBuild.dir/src/testBuild.cpp.s
+.PHONY : src/testBuild.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -424,7 +535,9 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... kinectDataTest"
 	@echo "... list_install_components"
+	@echo "... passThrough"
 	@echo "... pclFiltersKinect"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
@@ -438,12 +551,22 @@ help:
 	@echo "... test-future"
 	@echo "... test-results"
 	@echo "... test-results-run"
+	@echo "... testBuild"
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/kinectDataTest.o"
+	@echo "... src/kinectDataTest.i"
+	@echo "... src/kinectDataTest.s"
+	@echo "... src/passThrough.o"
+	@echo "... src/passThrough.i"
+	@echo "... src/passThrough.s"
 	@echo "... src/pclFiltersKinect.o"
 	@echo "... src/pclFiltersKinect.i"
 	@echo "... src/pclFiltersKinect.s"
+	@echo "... src/testBuild.o"
+	@echo "... src/testBuild.i"
+	@echo "... src/testBuild.s"
 .PHONY : help
 
 
