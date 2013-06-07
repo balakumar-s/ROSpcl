@@ -16,12 +16,12 @@ void callback(const sensor_msgs::Image& input)
 	input_cv=cv_bridge::toCvCopy(input,sensor_msgs::image_encodings::BGR8);
 	cv::Mat image_cv;
 	image_cv=input_cv->image;
-	cv::namedWindow("output");
 	cv::imshow("output",image_cv);
-	cv::waitKey(3);
+	cv::waitKey(1);
 }
 int main(int argc,char** argv)
 {
+        cv::namedWindow("output");	
 	ros::init(argc,argv,"opencvImagesubsriber");
 	ros::NodeHandle nh;
 	ros::Subscriber sub=nh.subscribe("/kinectSplitter/image", 1, callback);
