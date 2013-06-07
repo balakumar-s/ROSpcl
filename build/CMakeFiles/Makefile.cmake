@@ -134,6 +134,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/doxygen.dir/DependInfo.cmake"
   "CMakeFiles/kinectSplitter.dir/DependInfo.cmake"
   "CMakeFiles/opencv2Test.dir/DependInfo.cmake"
+  "CMakeFiles/opencvImageSubscriber.dir/DependInfo.cmake"
   "CMakeFiles/opencvTest.dir/DependInfo.cmake"
   "CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake"
   "CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake"

@@ -218,6 +218,19 @@ opencv2Test/fast:
 .PHONY : opencv2Test/fast
 
 #=============================================================================
+# Target rules for targets named opencvImageSubscriber
+
+# Build rule for target.
+opencvImageSubscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvImageSubscriber
+.PHONY : opencvImageSubscriber
+
+# fast build rule for target.
+opencvImageSubscriber/fast:
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/build
+.PHONY : opencvImageSubscriber/fast
+
+#=============================================================================
 # Target rules for targets named opencvTest
 
 # Build rule for target.
@@ -460,6 +473,30 @@ src/opencv2Test.cpp.s:
 	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/src/opencv2Test.cpp.s
 .PHONY : src/opencv2Test.cpp.s
 
+src/opencvImageSubscriber.o: src/opencvImageSubscriber.cpp.o
+.PHONY : src/opencvImageSubscriber.o
+
+# target to build an object file
+src/opencvImageSubscriber.cpp.o:
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/src/opencvImageSubscriber.cpp.o
+.PHONY : src/opencvImageSubscriber.cpp.o
+
+src/opencvImageSubscriber.i: src/opencvImageSubscriber.cpp.i
+.PHONY : src/opencvImageSubscriber.i
+
+# target to preprocess a source file
+src/opencvImageSubscriber.cpp.i:
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/src/opencvImageSubscriber.cpp.i
+.PHONY : src/opencvImageSubscriber.cpp.i
+
+src/opencvImageSubscriber.s: src/opencvImageSubscriber.cpp.s
+.PHONY : src/opencvImageSubscriber.s
+
+# target to generate assembly for a file
+src/opencvImageSubscriber.cpp.s:
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/src/opencvImageSubscriber.cpp.s
+.PHONY : src/opencvImageSubscriber.cpp.s
+
 src/opencvTest.o: src/opencvTest.cpp.o
 .PHONY : src/opencvTest.o
 
@@ -501,6 +538,7 @@ help:
 	@echo "... kinectSplitter"
 	@echo "... list_install_components"
 	@echo "... opencv2Test"
+	@echo "... opencvImageSubscriber"
 	@echo "... opencvTest"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
@@ -523,6 +561,9 @@ help:
 	@echo "... src/opencv2Test.o"
 	@echo "... src/opencv2Test.i"
 	@echo "... src/opencv2Test.s"
+	@echo "... src/opencvImageSubscriber.o"
+	@echo "... src/opencvImageSubscriber.i"
+	@echo "... src/opencvImageSubscriber.s"
 	@echo "... src/opencvTest.o"
 	@echo "... src/opencvTest.i"
 	@echo "... src/opencvTest.s"

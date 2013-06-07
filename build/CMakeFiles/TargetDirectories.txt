@@ -6,6 +6,7 @@
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest_main.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/kinectSplitter.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/opencv2Test.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/opencvImageSubscriber.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/opencvTest.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/rosbuild_clean-test-results.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/rosbuild_precompile.dir

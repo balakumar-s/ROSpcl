@@ -247,13 +247,48 @@ clean: CMakeFiles/opencv2Test.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/opencvImageSubscriber.dir
+
+# All Build rule for target.
+CMakeFiles/opencvImageSubscriber.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/depend
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  6
+	@echo "Built target opencvImageSubscriber"
+.PHONY : CMakeFiles/opencvImageSubscriber.dir/all
+
+# Include target in all.
+all: CMakeFiles/opencvImageSubscriber.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/opencvImageSubscriber.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/opencvImageSubscriber.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/opencvImageSubscriber.dir/rule
+
+# Convenience name for target.
+opencvImageSubscriber: CMakeFiles/opencvImageSubscriber.dir/rule
+.PHONY : opencvImageSubscriber
+
+# clean rule for target.
+CMakeFiles/opencvImageSubscriber.dir/clean:
+	$(MAKE) -f CMakeFiles/opencvImageSubscriber.dir/build.make CMakeFiles/opencvImageSubscriber.dir/clean
+.PHONY : CMakeFiles/opencvImageSubscriber.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/opencvImageSubscriber.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/opencvTest.dir
 
 # All Build rule for target.
 CMakeFiles/opencvTest.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/opencvTest.dir/build.make CMakeFiles/opencvTest.dir/depend
 	$(MAKE) -f CMakeFiles/opencvTest.dir/build.make CMakeFiles/opencvTest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  7
 	@echo "Built target opencvTest"
 .PHONY : CMakeFiles/opencvTest.dir/all
 
