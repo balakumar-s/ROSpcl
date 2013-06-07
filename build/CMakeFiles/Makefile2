@@ -177,13 +177,83 @@ clean: CMakeFiles/doxygen.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/kinectSplitter.dir
+
+# All Build rule for target.
+CMakeFiles/kinectSplitter.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/depend
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  4
+	@echo "Built target kinectSplitter"
+.PHONY : CMakeFiles/kinectSplitter.dir/all
+
+# Include target in all.
+all: CMakeFiles/kinectSplitter.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/kinectSplitter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/kinectSplitter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/kinectSplitter.dir/rule
+
+# Convenience name for target.
+kinectSplitter: CMakeFiles/kinectSplitter.dir/rule
+.PHONY : kinectSplitter
+
+# clean rule for target.
+CMakeFiles/kinectSplitter.dir/clean:
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/clean
+.PHONY : CMakeFiles/kinectSplitter.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/kinectSplitter.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/opencv2Test.dir
+
+# All Build rule for target.
+CMakeFiles/opencv2Test.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/depend
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  5
+	@echo "Built target opencv2Test"
+.PHONY : CMakeFiles/opencv2Test.dir/all
+
+# Include target in all.
+all: CMakeFiles/opencv2Test.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/opencv2Test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/opencv2Test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles 0
+.PHONY : CMakeFiles/opencv2Test.dir/rule
+
+# Convenience name for target.
+opencv2Test: CMakeFiles/opencv2Test.dir/rule
+.PHONY : opencv2Test
+
+# clean rule for target.
+CMakeFiles/opencv2Test.dir/clean:
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/clean
+.PHONY : CMakeFiles/opencv2Test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/opencv2Test.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/opencvTest.dir
 
 # All Build rule for target.
 CMakeFiles/opencvTest.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/opencvTest.dir/build.make CMakeFiles/opencvTest.dir/depend
 	$(MAKE) -f CMakeFiles/opencvTest.dir/build.make CMakeFiles/opencvTest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles  6
 	@echo "Built target opencvTest"
 .PHONY : CMakeFiles/opencvTest.dir/all
 

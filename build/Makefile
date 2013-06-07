@@ -192,6 +192,32 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named kinectSplitter
+
+# Build rule for target.
+kinectSplitter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinectSplitter
+.PHONY : kinectSplitter
+
+# fast build rule for target.
+kinectSplitter/fast:
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/build
+.PHONY : kinectSplitter/fast
+
+#=============================================================================
+# Target rules for targets named opencv2Test
+
+# Build rule for target.
+opencv2Test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv2Test
+.PHONY : opencv2Test
+
+# fast build rule for target.
+opencv2Test/fast:
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/build
+.PHONY : opencv2Test/fast
+
+#=============================================================================
 # Target rules for targets named opencvTest
 
 # Build rule for target.
@@ -386,6 +412,54 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/kinectSplitter.o: src/kinectSplitter.cpp.o
+.PHONY : src/kinectSplitter.o
+
+# target to build an object file
+src/kinectSplitter.cpp.o:
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o
+.PHONY : src/kinectSplitter.cpp.o
+
+src/kinectSplitter.i: src/kinectSplitter.cpp.i
+.PHONY : src/kinectSplitter.i
+
+# target to preprocess a source file
+src/kinectSplitter.cpp.i:
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.i
+.PHONY : src/kinectSplitter.cpp.i
+
+src/kinectSplitter.s: src/kinectSplitter.cpp.s
+.PHONY : src/kinectSplitter.s
+
+# target to generate assembly for a file
+src/kinectSplitter.cpp.s:
+	$(MAKE) -f CMakeFiles/kinectSplitter.dir/build.make CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.s
+.PHONY : src/kinectSplitter.cpp.s
+
+src/opencv2Test.o: src/opencv2Test.cpp.o
+.PHONY : src/opencv2Test.o
+
+# target to build an object file
+src/opencv2Test.cpp.o:
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/src/opencv2Test.cpp.o
+.PHONY : src/opencv2Test.cpp.o
+
+src/opencv2Test.i: src/opencv2Test.cpp.i
+.PHONY : src/opencv2Test.i
+
+# target to preprocess a source file
+src/opencv2Test.cpp.i:
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/src/opencv2Test.cpp.i
+.PHONY : src/opencv2Test.cpp.i
+
+src/opencv2Test.s: src/opencv2Test.cpp.s
+.PHONY : src/opencv2Test.s
+
+# target to generate assembly for a file
+src/opencv2Test.cpp.s:
+	$(MAKE) -f CMakeFiles/opencv2Test.dir/build.make CMakeFiles/opencv2Test.dir/src/opencv2Test.cpp.s
+.PHONY : src/opencv2Test.cpp.s
+
 src/opencvTest.o: src/opencvTest.cpp.o
 .PHONY : src/opencvTest.o
 
@@ -424,7 +498,9 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... kinectSplitter"
 	@echo "... list_install_components"
+	@echo "... opencv2Test"
 	@echo "... opencvTest"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
@@ -441,6 +517,12 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/kinectSplitter.o"
+	@echo "... src/kinectSplitter.i"
+	@echo "... src/kinectSplitter.s"
+	@echo "... src/opencv2Test.o"
+	@echo "... src/opencv2Test.i"
+	@echo "... src/opencv2Test.s"
 	@echo "... src/opencvTest.o"
 	@echo "... src/opencvTest.i"
 	@echo "... src/opencvTest.s"

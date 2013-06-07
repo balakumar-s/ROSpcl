@@ -30,8 +30,7 @@ void callback(const sensor_msgs::PointCloud2 input)
     vG.setInputCloud(input_pcl);
     vG.setLeafSize (0.01f, 0.01f, 0.01f);
     vG.filter(*output_pcl);
-    pcl::toROSMsg(*output_pcl,imageRGB);
-    nearImage.publish(imageRGB);  
+    
   //Statistical Outlier Removal(remove noise)
 
     pcl::StatisticalOutlierRemoval<pcl::PointXYZRGB> sor;
@@ -45,7 +44,6 @@ void callback(const sensor_msgs::PointCloud2 input)
     pcl::toROSMsg(*output_pcl,filteredOutput);
     filteredPub.publish(filteredOutput);
 
-  
   //passthrough filter to detect nearby objects
     pcl::PassThrough<pcl::PointXYZRGB> pass;
     pass.setInputCloud(output_pcl);
@@ -75,8 +73,7 @@ main (int argc, char** argv)
 
   filteredPub = nh.advertise<sensor_msgs::PointCloud2> ("pclFilters/filteredOutput", 1);
   nearObjects = nh.advertise<sensor_msgs::PointCloud2>("pclFilters/nearObj",1);
-  nearImage=nh.advertise<sensor_msgs::Image>("pclFilters/imageNear",2);
-  nearDepth=nh.advertise<sensor_msgs::PointCloud2>("pclFilters/nearDepth",1);
+
   printf("\Publisher Running\n");
   ros::spin();
   printf("\nSPIN\n");
