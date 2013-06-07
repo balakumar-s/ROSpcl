@@ -33,14 +33,13 @@ void faceDetect(Mat frame)
 	{	
 		printf("%d",i);		
 		Point center(faces[i].x+faces[i].width*.5,faces[i].y+faces[i].height*.5);
-//		ellipse(frame,center,Size( faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar( 255, 0, 255 ), 4, 8, 0 );
 		Point pt1(faces[i].x,faces[i].y);		
 		Point pt2(faces[i].x+faces[i].width,faces[i].y+faces[i].height);
 		rectangle(frame,pt1,pt2,Scalar(255,0,0),2,8,0);
 		Mat faceROI = frame_mono( faces[i] );
 		std::vector<Rect> eyes;
 
-		eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(30, 30) );
+		eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(20, 20) );
 
     		for( int j = 0; j < eyes.size(); j++ )
      		{

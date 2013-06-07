@@ -3,14 +3,14 @@
 _________________________________________________________________________
 Author: Balakumar Sundarlingam,SALEM,India
 
-Files:
+#####Source Files:
 
 
 #####testBuild.cpp
-Test Ros build file
+Test Ros build file.
 
 #####passThrough.cpp
-Pcl passthrough filter test with sample data
+Pcl passthrough filter test with sample data.
 
 #####KinectDataTest.cpp 
 Test of kinect sensor_msgs with  pcl Voxel grid filter
@@ -19,4 +19,16 @@ Test of kinect sensor_msgs with  pcl Voxel grid filter
 Kinect ROS pcl interface and applying of common filters.
 
 #####opencvTest.cpp
-test of opencv libraries
+test of opencv libraries.
+
+#####opencv2Test.cpp
+opencv2 test.
+
+#####kinectSplitter.cpp
+Splits the depth_registered points to RGB and XYZ.
+
+#####opencvImageSubscriber.cpp
+kinectSplitter RGB node import to opencv format.
+
+#####faceDetection.cpp
+Detects faces and eyes using Haar cascades.
