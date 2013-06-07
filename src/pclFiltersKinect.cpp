@@ -8,8 +8,8 @@
 //global variables
 
   ros::Publisher filteredPub,nearObjects;
-  sensor_msgs::PointCloud2 filteredOutput;
-
+  sensor_msgs::PointCloud2 filteredOutput,depthOutput;
+  sensor_msgs::Image imageRGB;
 void callback(const sensor_msgs::PointCloud2 input)
 {
 
@@ -19,7 +19,8 @@ void callback(const sensor_msgs::PointCloud2 input)
 
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr input_pcl (new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr output_pcl(new pcl::PointCloud<pcl::PointXYZRGB>);
-
+    //pcl::PointCloud<pcl::PointXYZ>::Ptr depth_pcl(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ> depth_pcl; 
     pcl::fromROSMsg(input,*input_pcl);
   
  
@@ -29,7 +30,7 @@ void callback(const sensor_msgs::PointCloud2 input)
     vG.setInputCloud(input_pcl);
     vG.setLeafSize (0.01f, 0.01f, 0.01f);
     vG.filter(*output_pcl);
-  
+    
   //Statistical Outlier Removal(remove noise)
 
     pcl::StatisticalOutlierRemoval<pcl::PointXYZRGB> sor;
@@ -42,7 +43,7 @@ void callback(const sensor_msgs::PointCloud2 input)
 
     pcl::toROSMsg(*output_pcl,filteredOutput);
     filteredPub.publish(filteredOutput);
-  
+
   //passthrough filter to detect nearby objects
     pcl::PassThrough<pcl::PointXYZRGB> pass;
     pass.setInputCloud(output_pcl);
@@ -52,7 +53,7 @@ void callback(const sensor_msgs::PointCloud2 input)
   //near object in a seperate topic 
     pcl::toROSMsg(*output_pcl,filteredOutput);
     nearObjects.publish(filteredOutput);
-}
+  }
 
 
 
@@ -70,8 +71,8 @@ main (int argc, char** argv)
 
   printf("\nSubscriber Running\n");
 
-  filteredPub = nh.advertise<sensor_msgs::PointCloud2> ("filteredOutput", 1);
-  nearObjects = nh.advertise<sensor_msgs::PointCloud2>("nearObj",1);
+  filteredPub = nh.advertise<sensor_msgs::PointCloud2> ("pclFilters/filteredOutput", 1);
+  nearObjects = nh.advertise<sensor_msgs::PointCloud2>("pclFilters/nearObj",1);
 
   printf("\Publisher Running\n");
   ros::spin();
