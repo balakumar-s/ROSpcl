@@ -132,6 +132,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ROSBUILD_gensrv_cpp.dir/DependInfo.cmake"
   "CMakeFiles/clean_test_results.dir/DependInfo.cmake"
   "CMakeFiles/doxygen.dir/DependInfo.cmake"
+  "CMakeFiles/faceDetection.dir/DependInfo.cmake"
   "CMakeFiles/kinectSplitter.dir/DependInfo.cmake"
   "CMakeFiles/opencv2Test.dir/DependInfo.cmake"
   "CMakeFiles/opencvImageSubscriber.dir/DependInfo.cmake"

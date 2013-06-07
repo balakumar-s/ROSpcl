@@ -192,6 +192,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named faceDetection
+
+# Build rule for target.
+faceDetection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 faceDetection
+.PHONY : faceDetection
+
+# fast build rule for target.
+faceDetection/fast:
+	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/build
+.PHONY : faceDetection/fast
+
+#=============================================================================
 # Target rules for targets named kinectSplitter
 
 # Build rule for target.
@@ -425,6 +438,30 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/faceDetection.o: src/faceDetection.cpp.o
+.PHONY : src/faceDetection.o
+
+# target to build an object file
+src/faceDetection.cpp.o:
+	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/src/faceDetection.cpp.o
+.PHONY : src/faceDetection.cpp.o
+
+src/faceDetection.i: src/faceDetection.cpp.i
+.PHONY : src/faceDetection.i
+
+# target to preprocess a source file
+src/faceDetection.cpp.i:
+	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/src/faceDetection.cpp.i
+.PHONY : src/faceDetection.cpp.i
+
+src/faceDetection.s: src/faceDetection.cpp.s
+.PHONY : src/faceDetection.s
+
+# target to generate assembly for a file
+src/faceDetection.cpp.s:
+	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/src/faceDetection.cpp.s
+.PHONY : src/faceDetection.cpp.s
+
 src/kinectSplitter.o: src/kinectSplitter.cpp.o
 .PHONY : src/kinectSplitter.o
 
@@ -532,6 +569,7 @@ help:
 	@echo "... clean_test_results"
 	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... faceDetection"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -555,6 +593,9 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/faceDetection.o"
+	@echo "... src/faceDetection.i"
+	@echo "... src/faceDetection.s"
 	@echo "... src/kinectSplitter.o"
 	@echo "... src/kinectSplitter.i"
 	@echo "... src/kinectSplitter.s"
