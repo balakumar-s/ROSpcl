@@ -4,31 +4,23 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/src/gtest/src/gtest_main.cc" "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/src/opencvTest.cpp" "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/opencvTest.dir/src/opencvTest.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
-# Preprocessor definitions for this target.
-SET(CMAKE_TARGET_DEFINITIONS
-  "GTEST_CREATE_SHARED_LIBRARY=1"
-  )
-
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/include"
+  "../include"
   "/opt/ros/groovy/include"
   "/opt/ros/groovy/include/pcl-1.6"
   "/opt/ros/groovy/include/opencv"
   "/usr/include/eigen3"
   "/usr/include/vtk-5.8"
   "/usr/include/qhull"
-  "/usr/src/gtest/include"
-  "/usr/src/gtest"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

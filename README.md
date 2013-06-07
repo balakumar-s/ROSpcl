@@ -1,5 +1,5 @@
 #ROSpcl
-####point cloud tutorials in ROS using Microsoft Kinect sensor
+####point cloud and opencv tutorials in ROS groovy using Microsoft Kinect sensor
 _________________________________________________________________________
 Author: Balakumar Sundarlingam,SALEM,India
 
@@ -17,3 +17,6 @@ Test of kinect sensor_msgs with  pcl Voxel grid filter
 
 #####pclFiltersKinect.cpp
 Kinect ROS pcl interface and applying of common filters.
+
+#####opencvTest.cpp
+test of opencv libraries

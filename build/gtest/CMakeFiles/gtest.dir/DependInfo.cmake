@@ -22,6 +22,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/include"
   "/opt/ros/groovy/include"
   "/opt/ros/groovy/include/pcl-1.6"
+  "/opt/ros/groovy/include/opencv"
   "/usr/include/eigen3"
   "/usr/include/vtk-5.8"
   "/usr/include/qhull"
