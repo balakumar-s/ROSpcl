@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/src/fileWriteTest.cpp
+iostream
+-
+fstream
+-
+string
+-
+

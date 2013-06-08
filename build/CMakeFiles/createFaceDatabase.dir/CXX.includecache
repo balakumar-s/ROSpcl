@@ -25,6 +25,8 @@ sstream
 -
 sys/stat.h
 -
+fstream
+-
 string
 -
 sensor_msgs/image_encodings.h

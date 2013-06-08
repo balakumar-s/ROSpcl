@@ -218,6 +218,19 @@ faceDetection/fast:
 .PHONY : faceDetection/fast
 
 #=============================================================================
+# Target rules for targets named fileWriteTest
+
+# Build rule for target.
+fileWriteTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fileWriteTest
+.PHONY : fileWriteTest
+
+# fast build rule for target.
+fileWriteTest/fast:
+	$(MAKE) -f CMakeFiles/fileWriteTest.dir/build.make CMakeFiles/fileWriteTest.dir/build
+.PHONY : fileWriteTest/fast
+
+#=============================================================================
 # Target rules for targets named kinectSplitter
 
 # Build rule for target.
@@ -499,6 +512,30 @@ src/faceDetection.cpp.s:
 	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/src/faceDetection.cpp.s
 .PHONY : src/faceDetection.cpp.s
 
+src/fileWriteTest.o: src/fileWriteTest.cpp.o
+.PHONY : src/fileWriteTest.o
+
+# target to build an object file
+src/fileWriteTest.cpp.o:
+	$(MAKE) -f CMakeFiles/fileWriteTest.dir/build.make CMakeFiles/fileWriteTest.dir/src/fileWriteTest.cpp.o
+.PHONY : src/fileWriteTest.cpp.o
+
+src/fileWriteTest.i: src/fileWriteTest.cpp.i
+.PHONY : src/fileWriteTest.i
+
+# target to preprocess a source file
+src/fileWriteTest.cpp.i:
+	$(MAKE) -f CMakeFiles/fileWriteTest.dir/build.make CMakeFiles/fileWriteTest.dir/src/fileWriteTest.cpp.i
+.PHONY : src/fileWriteTest.cpp.i
+
+src/fileWriteTest.s: src/fileWriteTest.cpp.s
+.PHONY : src/fileWriteTest.s
+
+# target to generate assembly for a file
+src/fileWriteTest.cpp.s:
+	$(MAKE) -f CMakeFiles/fileWriteTest.dir/build.make CMakeFiles/fileWriteTest.dir/src/fileWriteTest.cpp.s
+.PHONY : src/fileWriteTest.cpp.s
+
 src/kinectSplitter.o: src/kinectSplitter.cpp.o
 .PHONY : src/kinectSplitter.o
 
@@ -608,6 +645,7 @@ help:
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... faceDetection"
+	@echo "... fileWriteTest"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -637,6 +675,9 @@ help:
 	@echo "... src/faceDetection.o"
 	@echo "... src/faceDetection.i"
 	@echo "... src/faceDetection.s"
+	@echo "... src/fileWriteTest.o"
+	@echo "... src/fileWriteTest.i"
+	@echo "... src/fileWriteTest.s"
 	@echo "... src/kinectSplitter.o"
 	@echo "... src/kinectSplitter.i"
 	@echo "... src/kinectSplitter.s"
