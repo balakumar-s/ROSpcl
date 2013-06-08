@@ -30,8 +30,7 @@ void faceDetect(Mat frame)
 	equalizeHist(frame_mono,frame_mono);
 	face_cascade.detectMultiScale(frame_mono,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(20,20));
 	for (int i=0;i<faces.size();i++)
-	{	
-		printf("%d",i);		
+	{		
 		Point center(faces[i].x+faces[i].width*.5,faces[i].y+faces[i].height*.5);
 		Point pt1(faces[i].x,faces[i].y);		
 		Point pt2(faces[i].x+faces[i].width,faces[i].y+faces[i].height);

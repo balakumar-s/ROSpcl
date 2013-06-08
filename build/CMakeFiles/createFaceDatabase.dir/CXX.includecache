@@ -31,6 +31,10 @@ string
 -
 sensor_msgs/image_encodings.h
 -
+stdlib.h
+-
+stdio.h
+-
 
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h

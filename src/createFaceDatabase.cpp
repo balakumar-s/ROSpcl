@@ -10,13 +10,15 @@
 #include <fstream>
 #include <string>
 #include <sensor_msgs/image_encodings.h>
+#include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 using namespace cv;
 string face_cascade_name="/opt/ros/groovy/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml";
 CascadeClassifier face_cascade;
-int count_image=1,count_person;
+int count_image=1,count_person=0;
 string person_name;
-fstream *text_file;
+fstream text_file;
 void faceDetectStore(Mat frame,string name)
 {
 	Mat frame_mono;
@@ -51,8 +53,7 @@ void faceDetectStore(Mat frame,string name)
 		std::string COUNT(cnt.str());
 		location+="/"+name+COUNT+".jpeg";
 		imwrite(location,image_resized);
-		//fstream write_file=*text_file; 
-		*text_file<<count_person<<" "<<name<<" "<<location>>"\n";
+		text_file<<count_person<<" "<<name<<" "<<location<<"\n";
 		count_image++;
 	   }
 	}	
@@ -88,25 +89,27 @@ int main(int argc,char** argv)
 	fstream text_file_old  ("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
 	if(text_file_old.is_open())
 	    {	
-		while(text_file->good())
+		text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
+		while(text_file.good())
 		{
-			//text_file.getline(line);
-			getline(text_file_old,line,' ');
+			getline(text_file,line,' ');
 		}
+		stringstream convert(line);
+		convert>>count_person;
     		count_person++;
-		text_file=&text_file_old;		
+	
 	    }
 	
 	else 
 	    {	
-		//ofstream text_file;
-		text_file->open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
+
+		text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
 		count_person=1;
 	    }
 		
 	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 	initiateDatabase(argc,argv);
-	text_file->close();
+	text_file.close();
 	text_file_old.close();
 	return(0);
 }

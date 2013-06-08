@@ -68,7 +68,7 @@ int main(int argc,char** argv)
 	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 	if( !eyes_cascade.load( eyes_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 
-	ros::init(argc,argv,"opencvImagesubsriber");
+	ros::init(argc,argv,"opencvFaceDetection");
 	ros::NodeHandle nh;
 	ros::Subscriber sub=nh.subscribe("/kinectSplitter/image", 1, callback);
 	ros::spin();
