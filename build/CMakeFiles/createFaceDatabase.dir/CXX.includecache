@@ -21,6 +21,12 @@ cv_bridge/cv_bridge.h
 -
 iostream
 -
+sstream
+-
+sys/stat.h
+-
+string
+-
 sensor_msgs/image_encodings.h
 -
 
