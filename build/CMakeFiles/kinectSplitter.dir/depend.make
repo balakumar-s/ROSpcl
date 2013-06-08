@@ -87,6 +87,7 @@ CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /opt/ros/groovy/include/
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /opt/ros/groovy/include/sensor_msgs/PointCloud2.h
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /opt/ros/groovy/include/sensor_msgs/PointField.h
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /opt/ros/groovy/include/std_msgs/Header.h
+CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /opt/ros/groovy/include/std_msgs/String.h
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /usr/include/eigen3/Eigen/Core
 CMakeFiles/kinectSplitter.dir/src/kinectSplitter.cpp.o: /usr/include/eigen3/Eigen/Dense

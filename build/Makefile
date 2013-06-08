@@ -179,6 +179,19 @@ clean_test_results/fast:
 .PHONY : clean_test_results/fast
 
 #=============================================================================
+# Target rules for targets named createFaceDatabase
+
+# Build rule for target.
+createFaceDatabase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 createFaceDatabase
+.PHONY : createFaceDatabase
+
+# fast build rule for target.
+createFaceDatabase/fast:
+	$(MAKE) -f CMakeFiles/createFaceDatabase.dir/build.make CMakeFiles/createFaceDatabase.dir/build
+.PHONY : createFaceDatabase/fast
+
+#=============================================================================
 # Target rules for targets named doxygen
 
 # Build rule for target.
@@ -438,6 +451,30 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/createFaceDatabase.o: src/createFaceDatabase.cpp.o
+.PHONY : src/createFaceDatabase.o
+
+# target to build an object file
+src/createFaceDatabase.cpp.o:
+	$(MAKE) -f CMakeFiles/createFaceDatabase.dir/build.make CMakeFiles/createFaceDatabase.dir/src/createFaceDatabase.cpp.o
+.PHONY : src/createFaceDatabase.cpp.o
+
+src/createFaceDatabase.i: src/createFaceDatabase.cpp.i
+.PHONY : src/createFaceDatabase.i
+
+# target to preprocess a source file
+src/createFaceDatabase.cpp.i:
+	$(MAKE) -f CMakeFiles/createFaceDatabase.dir/build.make CMakeFiles/createFaceDatabase.dir/src/createFaceDatabase.cpp.i
+.PHONY : src/createFaceDatabase.cpp.i
+
+src/createFaceDatabase.s: src/createFaceDatabase.cpp.s
+.PHONY : src/createFaceDatabase.s
+
+# target to generate assembly for a file
+src/createFaceDatabase.cpp.s:
+	$(MAKE) -f CMakeFiles/createFaceDatabase.dir/build.make CMakeFiles/createFaceDatabase.dir/src/createFaceDatabase.cpp.s
+.PHONY : src/createFaceDatabase.cpp.s
+
 src/faceDetection.o: src/faceDetection.cpp.o
 .PHONY : src/faceDetection.o
 
@@ -567,6 +604,7 @@ help:
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... clean_test_results"
+	@echo "... createFaceDatabase"
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... faceDetection"
@@ -593,6 +631,9 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/createFaceDatabase.o"
+	@echo "... src/createFaceDatabase.i"
+	@echo "... src/createFaceDatabase.s"
 	@echo "... src/faceDetection.o"
 	@echo "... src/faceDetection.i"
 	@echo "... src/faceDetection.s"

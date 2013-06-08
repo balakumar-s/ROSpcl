@@ -9,7 +9,7 @@ sensor_msgs::PointCloud2 xyzOutput;
 
 void callback(const sensor_msgs::PointCloud2 input)
 {
-	printf("Kinect Splitter running\n");
+	//printf("Kinect Splitter running\n");
         
 	pcl::PointCloud<pcl::PointXYZRGB>::Ptr input_pcl(new pcl::PointCloud<pcl::PointXYZRGB>);
 	pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pcl(new pcl::PointCloud<pcl::PointXYZ>);

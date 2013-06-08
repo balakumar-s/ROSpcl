@@ -21,7 +21,7 @@ void callback(const sensor_msgs::PointCloud2 input)
 	pcl::toROSMsg(*input_pcl,rgbOutput);
 	pcl::toROSMsg(*xyz_pcl,xyzOutput);
 
-	imagePub.publish(rgboutput);
+	imagePub.publish(rgbOutput);
 	depthPub.publish(xyzOutput);
 }
 int main(int argc,char *argv[])
