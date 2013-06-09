@@ -17,15 +17,15 @@ using namespace cv;
 string face_cascade_name="/opt/ros/groovy/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml";
 CascadeClassifier face_cascade;
 int count_image=1,count_person=0;
-string person_name;
-fstream text_file;
+string person_name,count_name;
+//fstream text_file;
 void faceDetectStore(Mat frame,string name)
 {
 	Mat frame_mono;
         std::vector<Rect> faces;
 	cvtColor(frame,frame_mono,CV_BGR2GRAY);
 	equalizeHist(frame_mono,frame_mono);
-	face_cascade.detectMultiScale(frame_mono,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(20,20));
+	face_cascade.detectMultiScale(frame_mono,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(50,50));
 	for (int i=0;i<faces.size();i++)
 	{	
 	string windowName="face";
@@ -42,7 +42,7 @@ void faceDetectStore(Mat frame,string name)
 	imshow(windowName,face);
 
 	if(i==0)
-	   {
+	   {	
 		Mat image_resized(100,100, DataType<float>::type);
 		resize(face,image_resized,image_resized.size(),0,0,CV_INTER_LINEAR);
 		string location;
@@ -53,7 +53,16 @@ void faceDetectStore(Mat frame,string name)
 		std::string COUNT(cnt.str());
 		location+="/"+name+COUNT+".jpeg";
 		imwrite(location,image_resized);
-		text_file<<count_person<<" "<<name<<" "<<location<<"\n";
+		printf("out\n");
+		ofstream text_file;		
+		text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt", std::ios_base::app);
+		if(text_file.is_open())
+		{
+		printf("\nrunning");
+		cout <<count_person<<" "<<name<<" "<<location<<endl;
+		text_file <<count_person<<" "<<name<<" "<<location<<endl;
+		text_file.close();
+		}
 		count_image++;
 	   }
 	}	
@@ -86,31 +95,41 @@ int main(int argc,char** argv)
 	printf("\nWelcome to Eigen Face Database\nEnter your name:\n");		
 	cin>>person_name;
 	string line;
-	fstream text_file_old  ("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
+	ifstream text_file_old ("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
 	if(text_file_old.is_open())
 	    {	
+		printf("if works\n");
+		ifstream text_file;		
 		text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
 		while(text_file.good())
 		{
-			getline(text_file,line,' ');
+			text_file>>count_person>> count_name>> line;
+			// Ignore first character or everything up to the next newline,
+			// whichever comes first
+			text_file.ignore(0,'\n'); 
 		}
-		stringstream convert(line);
-		convert>>count_person;
+		//stringstream convert(line);
+		//convert>>count_person;
     		count_person++;
+		cout<<count_person<<"\n";
+		text_file.close();	
 	
 	    }
 	
 	else 
 	    {	
-
-		text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt");
+		//fstream text_file;
+		//text_file.open("/home/jarvis/ROS_jarvis/eigen_faces/imageSheet.txt",ios::out);
 		count_person=1;
+		//text_file<<"imageSheet"<<endl;
+		//text_file.close();	
 	    }
-		
+	
+	text_file_old.close();
 	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 	initiateDatabase(argc,argv);
-	text_file.close();
-	text_file_old.close();
+	//text_file.close();
+	//text_file_old.close();
 	return(0);
 }
 	

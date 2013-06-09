@@ -3,22 +3,16 @@
 #include <string>
 using namespace std;
 int main () {
-  string line;
-  fstream myfile ("example.txt");
-  fstream *my_file;
-  if (myfile.is_open())
-  {
-	my_file=&myfile;
-    while ( myfile.good() )
-    {
-      getline (*my_file,line);
-      cout << line << endl;
-    }
-    myfile.close();
-    my_file->close();
-  }
+  ofstream file2;
+  file2.open("/home/jarvis/example.txt", std::ios_base::app);
+  if(!file2)
+{ 
+printf("error");
+}
+  file2<<"hellos23"<<endl;
+  file2.close();
 
-  else cout << "Unable to open file"; 
+ 
 
-  return 0;
+  return (0);
 }
