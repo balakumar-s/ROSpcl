@@ -3,6 +3,7 @@
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/clean_test_results.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/createFaceDatabase.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/doxygen.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/eigenFacesTraining.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/faceDetection.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/fileWriteTest.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest.dir

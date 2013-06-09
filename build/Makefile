@@ -205,6 +205,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named eigenFacesTraining
+
+# Build rule for target.
+eigenFacesTraining: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigenFacesTraining
+.PHONY : eigenFacesTraining
+
+# fast build rule for target.
+eigenFacesTraining/fast:
+	$(MAKE) -f CMakeFiles/eigenFacesTraining.dir/build.make CMakeFiles/eigenFacesTraining.dir/build
+.PHONY : eigenFacesTraining/fast
+
+#=============================================================================
 # Target rules for targets named faceDetection
 
 # Build rule for target.
@@ -488,6 +501,30 @@ src/createFaceDatabase.cpp.s:
 	$(MAKE) -f CMakeFiles/createFaceDatabase.dir/build.make CMakeFiles/createFaceDatabase.dir/src/createFaceDatabase.cpp.s
 .PHONY : src/createFaceDatabase.cpp.s
 
+src/eigenFacesTraining.o: src/eigenFacesTraining.cpp.o
+.PHONY : src/eigenFacesTraining.o
+
+# target to build an object file
+src/eigenFacesTraining.cpp.o:
+	$(MAKE) -f CMakeFiles/eigenFacesTraining.dir/build.make CMakeFiles/eigenFacesTraining.dir/src/eigenFacesTraining.cpp.o
+.PHONY : src/eigenFacesTraining.cpp.o
+
+src/eigenFacesTraining.i: src/eigenFacesTraining.cpp.i
+.PHONY : src/eigenFacesTraining.i
+
+# target to preprocess a source file
+src/eigenFacesTraining.cpp.i:
+	$(MAKE) -f CMakeFiles/eigenFacesTraining.dir/build.make CMakeFiles/eigenFacesTraining.dir/src/eigenFacesTraining.cpp.i
+.PHONY : src/eigenFacesTraining.cpp.i
+
+src/eigenFacesTraining.s: src/eigenFacesTraining.cpp.s
+.PHONY : src/eigenFacesTraining.s
+
+# target to generate assembly for a file
+src/eigenFacesTraining.cpp.s:
+	$(MAKE) -f CMakeFiles/eigenFacesTraining.dir/build.make CMakeFiles/eigenFacesTraining.dir/src/eigenFacesTraining.cpp.s
+.PHONY : src/eigenFacesTraining.cpp.s
+
 src/faceDetection.o: src/faceDetection.cpp.o
 .PHONY : src/faceDetection.o
 
@@ -644,6 +681,7 @@ help:
 	@echo "... createFaceDatabase"
 	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... eigenFacesTraining"
 	@echo "... faceDetection"
 	@echo "... fileWriteTest"
 	@echo "... install"
@@ -672,6 +710,9 @@ help:
 	@echo "... src/createFaceDatabase.o"
 	@echo "... src/createFaceDatabase.i"
 	@echo "... src/createFaceDatabase.s"
+	@echo "... src/eigenFacesTraining.o"
+	@echo "... src/eigenFacesTraining.i"
+	@echo "... src/eigenFacesTraining.s"
 	@echo "... src/faceDetection.o"
 	@echo "... src/faceDetection.i"
 	@echo "... src/faceDetection.s"
