@@ -22,19 +22,39 @@ int main(int argc,char** argv)
 	{
 		string location;
 		string name;
-		//Mat image;
+		Mat image;
 		int lbl;
 		fileToOpen>> lbl>> name>> location;
-		images.push_back(imread(location));
+		image=imread(location,0);
+		images.push_back(image);
 		labels.push_back(lbl);
 		names.push_back(name);
 	}
-	for(int t=0;t<names.size();++t)
-	{
-            cout<<names.at(t);
-        }
-                 
-	fileToOpen.close();
+	images.pop_back();
+	labels.pop_back();
+	names.pop_back();
+	int i=0;
+	namedWindow("out");
+	cout<<labels.size();
+	while(i<images.size())
+	{	
+		
+		cout<<i<<"\n";		
+		imshow("out",images[i]);
+		if(images[i].rows==0)
+		{
+		cout<<i;
+		}
+		i++;
+		//waitKey(0);
+
+	}
+	fileToOpen.close();	
+	Ptr<FaceRecognizer> model = createEigenFaceRecognizer();
+        model->train(images, labels);
+	Mat testSample=images[16];	
+	int predictedLabel = model->predict(testSample);
+        cout<<predictedLabel;
 	return 0;
                  
 }
