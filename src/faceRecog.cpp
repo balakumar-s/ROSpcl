@@ -40,14 +40,11 @@ string  faceRecog(Mat inputFace)
 		labels.push_back(lbl);
 		names.push_back(name);
 	}
+	fileToOpen.close();		
 	images.pop_back();
 	labels.pop_back();
 	names.pop_back();
 	int i=0;
-	//namedWindow("out");
-	cout<<labels.size();
-	
-	fileToOpen.close();	
 	Ptr<FaceRecognizer> model = createEigenFaceRecognizer();
         model->train(images, labels);
 	int predictedLabel = model->predict(inputFace);
@@ -63,7 +60,6 @@ string  faceRecog(Mat inputFace)
 		}
 	i++;
 	}
-	//cout<<"\n person is "<<predictedPerson<<"\n";
 	return(predictedPerson);
 	
 }
@@ -75,20 +71,11 @@ Mat faceGrabber(Mat frame,string name)
 	cvtColor(frame,frame_mono,CV_BGR2GRAY);
 	equalizeHist(frame_mono,frame_mono);
 	face_cascade.detectMultiScale(frame_mono,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(50,50));
-	printf("debug1");
 	for (int i=0;i<faces.size();i++)
 	{	
 	if(faces[i].height>0)
 	{
-	printf("face detected");
-	//std::stringstream ss;
-	//ss << i;
-	//std::string s(ss.str());
-	//windowName+=s;
-	namedWindow("frame");
-	printf("window created\n");
-	//waitKey(0);
-	cout<<faces[i].height<<" "<<faces[i].width;
+	namedWindow("Output");
 	Point center(faces[i].x+faces[i].width*.5,faces[i].y+faces[i].height*.5);
 	Point pt1(faces[i].x,faces[i].y);		
 	Point pt2(faces[i].x+faces[i].width,faces[i].y+faces[i].height);
@@ -97,9 +84,8 @@ Mat faceGrabber(Mat frame,string name)
 	Mat image_resized(100,100, DataType<float>::type);
 	resize(face,image_resized,image_resized.size(),0,0,CV_INTER_LINEAR);
 	string namePerson=faceRecog(image_resized);
-	cout<<namePerson;
-	putText(frame,namePerson,pt1,FONT_HERSHEY_SIMPLEX,2,Scalar(255,255,0));
-	imshow("frame",frame);
+	putText(frame,namePerson,pt1,FONT_HERSHEY_COMPLEX_SMALL,1,Scalar(0,0,255));
+	imshow("Output",frame);
 	}
 	}
 	return(face);	
@@ -112,12 +98,7 @@ void callback(const sensor_msgs::Image& input)
 	input_cv=cv_bridge::toCvCopy(input,sensor_msgs::image_encodings::BGR8);
 	Mat image_cv;
 	image_cv=input_cv->image;
-	//namedWindow("input");
-	//imshow("input",image_cv);
 	Mat faceS=faceGrabber(image_cv,"test");
-	//string namePerson=faceRecog(faceS);
-	//cout<<namePerson;
-	//faceDetectStore(image_cv,person_name);	
 	waitKey(1);
 }
 
