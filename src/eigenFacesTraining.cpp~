@@ -92,11 +92,11 @@ Mat faceGrabber(Mat frame,string name)
 	Point pt1(faces[i].x,faces[i].y);		
 	Point pt2(faces[i].x+faces[i].width,faces[i].y+faces[i].height);
 	rectangle(frame,pt1,pt2,Scalar(255,0,0),2,8,0);
-	imshow("frame",frame);
+	imshow("input",frame);
 	Mat face = frame_mono( faces[i] );
 	Mat image_resized(100,100, DataType<float>::type);
 	resize(face,image_resized,image_resized.size(),0,0,CV_INTER_LINEAR);
-	string namePerson=faceRecog(face);
+	string namePerson=faceRecog(image_resized);
 	cout<<namePerson;
 	}
 	}

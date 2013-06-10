@@ -231,6 +231,19 @@ faceDetection/fast:
 .PHONY : faceDetection/fast
 
 #=============================================================================
+# Target rules for targets named faceRecog
+
+# Build rule for target.
+faceRecog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 faceRecog
+.PHONY : faceRecog
+
+# fast build rule for target.
+faceRecog/fast:
+	$(MAKE) -f CMakeFiles/faceRecog.dir/build.make CMakeFiles/faceRecog.dir/build
+.PHONY : faceRecog/fast
+
+#=============================================================================
 # Target rules for targets named fileWriteTest
 
 # Build rule for target.
@@ -549,6 +562,30 @@ src/faceDetection.cpp.s:
 	$(MAKE) -f CMakeFiles/faceDetection.dir/build.make CMakeFiles/faceDetection.dir/src/faceDetection.cpp.s
 .PHONY : src/faceDetection.cpp.s
 
+src/faceRecog.o: src/faceRecog.cpp.o
+.PHONY : src/faceRecog.o
+
+# target to build an object file
+src/faceRecog.cpp.o:
+	$(MAKE) -f CMakeFiles/faceRecog.dir/build.make CMakeFiles/faceRecog.dir/src/faceRecog.cpp.o
+.PHONY : src/faceRecog.cpp.o
+
+src/faceRecog.i: src/faceRecog.cpp.i
+.PHONY : src/faceRecog.i
+
+# target to preprocess a source file
+src/faceRecog.cpp.i:
+	$(MAKE) -f CMakeFiles/faceRecog.dir/build.make CMakeFiles/faceRecog.dir/src/faceRecog.cpp.i
+.PHONY : src/faceRecog.cpp.i
+
+src/faceRecog.s: src/faceRecog.cpp.s
+.PHONY : src/faceRecog.s
+
+# target to generate assembly for a file
+src/faceRecog.cpp.s:
+	$(MAKE) -f CMakeFiles/faceRecog.dir/build.make CMakeFiles/faceRecog.dir/src/faceRecog.cpp.s
+.PHONY : src/faceRecog.cpp.s
+
 src/fileWriteTest.o: src/fileWriteTest.cpp.o
 .PHONY : src/fileWriteTest.o
 
@@ -683,6 +720,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... eigenFacesTraining"
 	@echo "... faceDetection"
+	@echo "... faceRecog"
 	@echo "... fileWriteTest"
 	@echo "... install"
 	@echo "... install/local"
@@ -716,6 +754,9 @@ help:
 	@echo "... src/faceDetection.o"
 	@echo "... src/faceDetection.i"
 	@echo "... src/faceDetection.s"
+	@echo "... src/faceRecog.o"
+	@echo "... src/faceRecog.i"
+	@echo "... src/faceRecog.s"
 	@echo "... src/fileWriteTest.o"
 	@echo "... src/fileWriteTest.i"
 	@echo "... src/fileWriteTest.s"

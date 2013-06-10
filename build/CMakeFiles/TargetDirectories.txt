@@ -5,6 +5,7 @@
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/doxygen.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/eigenFacesTraining.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/faceDetection.dir
+/home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/faceRecog.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/CMakeFiles/fileWriteTest.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest.dir
 /home/jarvis/ROS_jarvis/rosbuildFiles/ROSpcl/build/gtest/CMakeFiles/gtest_main.dir

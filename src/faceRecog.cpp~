@@ -44,7 +44,7 @@ string  faceRecog(Mat inputFace)
 	labels.pop_back();
 	names.pop_back();
 	int i=0;
-	namedWindow("out");
+	//namedWindow("out");
 	cout<<labels.size();
 	
 	fileToOpen.close();	
@@ -63,7 +63,7 @@ string  faceRecog(Mat inputFace)
 		}
 	i++;
 	}
-	cout<<"\n person is "<<predictedPerson<<"\n";
+	//cout<<"\n person is "<<predictedPerson<<"\n";
 	return(predictedPerson);
 	
 }
@@ -78,7 +78,7 @@ Mat faceGrabber(Mat frame,string name)
 	printf("debug1");
 	for (int i=0;i<faces.size();i++)
 	{	
-	while(faces[i].height>0)
+	if(faces[i].height>0)
 	{
 	printf("face detected");
 	//std::stringstream ss;
@@ -87,17 +87,19 @@ Mat faceGrabber(Mat frame,string name)
 	//windowName+=s;
 	namedWindow("frame");
 	printf("window created\n");
+	//waitKey(0);
 	cout<<faces[i].height<<" "<<faces[i].width;
 	Point center(faces[i].x+faces[i].width*.5,faces[i].y+faces[i].height*.5);
 	Point pt1(faces[i].x,faces[i].y);		
 	Point pt2(faces[i].x+faces[i].width,faces[i].y+faces[i].height);
 	rectangle(frame,pt1,pt2,Scalar(255,0,0),2,8,0);
-	imshow("input",frame);
 	Mat face = frame_mono( faces[i] );
 	Mat image_resized(100,100, DataType<float>::type);
 	resize(face,image_resized,image_resized.size(),0,0,CV_INTER_LINEAR);
 	string namePerson=faceRecog(image_resized);
 	cout<<namePerson;
+	putText(frame,namePerson,pt1,FONT_HERSHEY_SIMPLEX,2,Scalar(255,255,0));
+	imshow("frame",frame);
 	}
 	}
 	return(face);	
@@ -113,8 +115,10 @@ void callback(const sensor_msgs::Image& input)
 	namedWindow("input");
 	imshow("input",image_cv);
 	Mat faceS=faceGrabber(image_cv,"test");
+	//string namePerson=faceRecog(faceS);
+	//cout<<namePerson;
 	//faceDetectStore(image_cv,person_name);	
-	waitKey(0);
+	waitKey(1);
 }
 
 int initiateFaceRecog(int argC,char** argV)

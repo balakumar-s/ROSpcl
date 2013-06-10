@@ -135,6 +135,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/doxygen.dir/DependInfo.cmake"
   "CMakeFiles/eigenFacesTraining.dir/DependInfo.cmake"
   "CMakeFiles/faceDetection.dir/DependInfo.cmake"
+  "CMakeFiles/faceRecog.dir/DependInfo.cmake"
   "CMakeFiles/fileWriteTest.dir/DependInfo.cmake"
   "CMakeFiles/kinectSplitter.dir/DependInfo.cmake"
   "CMakeFiles/opencv2Test.dir/DependInfo.cmake"
